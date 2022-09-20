@@ -2,7 +2,9 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
+
 #define MAXTOKEN 100
+
 enum { NAME, PARENS, BRACKETS };
 void dcl(void);
 void dirdcl(void);
@@ -72,18 +74,19 @@ int gettoken(void) /* regresa el siguiente token */
     } else {
       ungetch(c);
       return tokentype = '(';
-} else if (c == '[') {
-  for (*p++ = c; (*p++ = getch()) != ']';)
-    ;
-  *p = '\0';
-  return tokentype = BRACKETS;
-} else if (isalpha(c)) {
-  for (*p++ = c; isalnum(c = getch());)
-    *p++ = c;
-  *p = '\0';
-  ungetch(c);
-  return tokentype = NAME;
-} else {
-  return tokentype = c;
-}
+    }
+  else if (c == '[') {
+    for (*p++ = c; (*p++ = getch()) != ']';)
+      ;
+    *p = '\0';
+    return tokentype = BRACKETS;
+  } else if (isalpha(c)) {
+    for (*p++ = c; isalnum(c = getch());)
+      *p++ = c;
+    *p = '\0';
+    ungetch(c);
+    return tokentype = NAME;
+  } else {
+    return tokentype = c;
+  }
 }

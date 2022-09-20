@@ -1,4 +1,6 @@
 #include<stdio.h>
+/* ejecuta una shell */
+
 void main() {
 	char *name[2];
 	name[0] = "/bin/sh";
