@@ -1,17 +1,13 @@
-# Analizador sintactico por descenso recursivo: para procesamiento de tokens de lenguaje.
-*no esta terminado*
+# Desarrollo de utilidades para programacion en bajo nivel.
 
-### Analizador
+### analizador 
+hacer analisis sintactico por descenso recursivo.
 ```
   gcc asdr.c
 ```
 
-### Laboratorio
+### lab
+compila una aplicacion para auditar la resistencia de un sistema.
 ```
   gcc lab/vuln.c
-```
-
-### Inicializacion de shell interactiva
-```
-  gcc lab/xcve.c
 ```

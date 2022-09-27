@@ -1,6 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+/*  smash stacking labs     */
 
 void func(char *arg)
 {

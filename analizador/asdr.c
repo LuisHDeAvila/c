@@ -2,6 +2,7 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <string.h>
+#include "getch.h"
 
 #define MAXTOKEN 100
 
